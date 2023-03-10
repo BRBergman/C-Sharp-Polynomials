@@ -3,17 +3,14 @@ using System;
 
 
 
-public class ratonalExpression
+public class polynomial
 {
     public double[] constants{get;set;}
-    public int degree
-    {
-        get{return constants.Length;}
-    }
+    public int degree {get{return constants.Length;}}
 
     
 
-    public ratonalExpression(int entered)
+    public polynomial(int entered)
     {
         constants = new double[entered];
     }
@@ -26,7 +23,7 @@ class program
     {
 
         //Console.WriteLine("hereh");
-        ratonalExpression ghg = new ratonalExpression(4);
+        polynomial ghg = new polynomial(4);
 
     Console.WriteLine(ghg.degree);
     }
