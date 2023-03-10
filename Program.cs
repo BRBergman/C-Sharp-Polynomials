@@ -13,21 +13,25 @@ public class polynomial
         constants = new double[entered.Length];
         entered.CopyTo(constants,0);
     }
+
+    //doenst work just yet aaaaa
     public double evaluatewithx(double x)
     {
-        double rerun = 1;
-        for (int i = degree-1; degree-1 < i; i--)
+        double rerun = 0;
+        for (int i = 0; degree > i; i++)
         {
-            Console.WriteLine(i);
+            //Console.WriteLine(i);
             if (i!=0 )
             {
-                rerun += constants[i] * Math.Pow(x,i);
-
+                rerun += (constants[i]* Math.Pow(x,i));
+                Console.WriteLine("helb {0}",i);
             }
             else
             {
+                Console.WriteLine("bleh");
                 rerun += constants[i];
             }   
+            Console.WriteLine(rerun);
         }
         return rerun;
     }
@@ -38,11 +42,10 @@ class program
 {
     public static void Main()
     {
-        double[] f = {1f,3f,2f};
-        polynomial ghg = new polynomial(f);
+        polynomial ghg = new polynomial(new double[]{1,2,3});
 
         //Console.WriteLine(ghg.degree);
-        Console.WriteLine(ghg.evaluatewithx(1));
+        Console.WriteLine(ghg.evaluatewithx(2));
     }
 
 
